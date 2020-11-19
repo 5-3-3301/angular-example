@@ -4,13 +4,13 @@ import { BasicComponent } from './component/basic/basic.component';
 
 const routes: Routes = [
   {
+    path: 'basic',
+    component: BasicComponent
+  },
+  {
     path: '',
     redirectTo: '/basic',
     pathMatch: 'full'
-  },
-  {
-    path: 'basic',
-    component: BasicComponent
   }
 ];
 
