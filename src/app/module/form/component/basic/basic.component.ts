@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-basic',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic.component.less']
 })
 export class BasicComponent implements OnInit {
+  respControl: FormControl;
+  tempValue = '';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    this.respControl = new FormControl('');
+  }
+
+  tempValueChange(value: string): void {
+    this.tempValue = value;
   }
 
 }

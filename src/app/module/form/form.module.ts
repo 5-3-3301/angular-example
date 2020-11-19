@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormComponent } from './form.component';
 import { BasicComponent } from './component/basic/basic.component';
 import { FormRoutingModule } from './form-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +11,9 @@ import { FormRoutingModule } from './form-routing.module';
   declarations: [FormComponent, BasicComponent],
   imports: [
     CommonModule,
-    FormRoutingModule
+    FormRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [FormComponent]
 })

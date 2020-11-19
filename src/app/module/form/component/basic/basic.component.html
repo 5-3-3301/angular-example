@@ -1,5 +1,20 @@
-<h1>简单示例</h1>
+<div class="form-basic">
+  <h2>简单示例</h2>
 
-<h3>响应式表单</h3>
+  <h3>响应式表单</h3>
+  <input
+    type="text"
+    placeholder="请输入响应式表单内容"
+    [formControl]="respControl"
+  />
+  <p>值：{{ respControl.value }}</p>
 
-<h3>模板驱动表单</h3>
+  <h3>模板驱动表单</h3>
+  <input
+    type="text"
+    placeholder="请输入模板驱动表单内容"
+    [ngModel]="tempValue"
+    (ngModelChange)="tempValueChange($event)"
+  />
+  <p>值：{{ tempValue }}</p>
+</div>
