@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 
 @Component({
-  selector: 'app-basic',
+  selector: 'app-form-basic',
   templateUrl: './basic.component.html',
   styleUrls: ['./basic.component.less']
 })
