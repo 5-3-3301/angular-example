@@ -14,8 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/basic',
-    pathMatch: 'full'
+    component: BasicComponent
   }
 ];
 
@@ -23,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class FormRoutingModule { }
+export class FormRoutingModule {}

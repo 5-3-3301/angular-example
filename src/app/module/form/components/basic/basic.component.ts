@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-basic',
@@ -19,5 +19,4 @@ export class BasicComponent implements OnInit {
   tempValueChange(value: string): void {
     this.tempValue = value;
   }
-
 }

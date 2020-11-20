@@ -8,9 +8,8 @@ describe('ResponsiveCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResponsiveCreateComponent ]
-    })
-    .compileComponents();
+      declarations: [ResponsiveCreateComponent]
+    }).compileComponents();
   });
 
   beforeEach(() => {
