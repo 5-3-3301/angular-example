@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-responsive-create',
@@ -8,13 +8,19 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ResponsiveCreateComponent implements OnInit {
   studentForm: FormGroup;
+  studentsForm: FormArray;
 
   constructor() {}
 
   ngOnInit(): void {
     this.studentForm = new FormGroup({
       name: new FormControl(''),
-      age: new FormControl('')
+      age: new FormControl(),
+      grads: new FormGroup({
+        chinese: new FormControl(),
+        math: new FormControl(),
+        english: new FormControl()
+      })
     });
   }
 
