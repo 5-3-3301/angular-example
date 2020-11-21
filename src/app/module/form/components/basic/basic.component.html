@@ -1,6 +1,15 @@
 <div class="form-basic">
   <h2>简单示例</h2>
 
+  <h3>原始表单</h3>
+  <input
+    type="text"
+    placeholder="请输入原始表单内容"
+    [value]="originValue"
+    (input)="originValueChange($event)"
+  />
+  <p>值：{{ originValue }}</p>
+
   <h3>响应式表单</h3>
   <input
     type="text"

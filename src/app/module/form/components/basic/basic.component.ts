@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./basic.component.less']
 })
 export class BasicComponent implements OnInit {
+  originValue = '';
   respControl: FormControl;
   tempValue = '';
 
@@ -14,6 +15,10 @@ export class BasicComponent implements OnInit {
 
   ngOnInit(): void {
     this.respControl = new FormControl('');
+  }
+
+  originValueChange(e: Event): void {
+    // this.originValue = e.target.value;
   }
 
   tempValueChange(value: string): void {
