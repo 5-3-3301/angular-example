@@ -6,13 +6,15 @@ import { FormRoutingModule } from './form-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResponsiveCreateComponent } from './components/responsive-create/responsive-create.component';
 import { ResponsiveSplitComponent } from './components/responsive-split/responsive-split.component';
+import { ResponsiveDynamicCreateComponent } from './components/responsive-dynamic-create/responsive-dynamic-create.component';
 
 @NgModule({
   declarations: [
     FormComponent,
     BasicComponent,
     ResponsiveCreateComponent,
-    ResponsiveSplitComponent
+    ResponsiveSplitComponent,
+    ResponsiveDynamicCreateComponent
   ],
   imports: [CommonModule, FormRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [FormComponent]
