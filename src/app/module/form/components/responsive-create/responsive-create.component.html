@@ -2,6 +2,7 @@
   <h2>响应式表单组的创建</h2>
 
   <h3>单个学生信息的添加</h3>
+<!--  TODO ngSubmit 使用注意，推荐使用底部 click 提交-->
   <form [formGroup]="studentForm" (ngSubmit)="onSubmitStudentInfo()">
     <label class="form-item">
       <span>姓名</span>
@@ -12,7 +13,7 @@
       <input type="number" placeholder="年龄" formControlName="age">
     </label>
 
-    <!--  嵌套表单  -->
+    <!--  TODO 嵌套表单  -->
 <!--    <div formGroupName="grads">-->
 <!--      <h4>成绩</h4>-->
 <!--      <label class="form-item">-->

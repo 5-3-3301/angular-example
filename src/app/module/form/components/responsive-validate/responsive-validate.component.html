@@ -1,0 +1,31 @@
+<div class="form-basic">
+  <h2>响应式表单组的创建</h2>
+
+  <h3>单个学生信息的添加</h3>
+  <form [formGroup]="studentForm">
+    <label class="form-item">
+      <span>姓名</span>
+      <input type="text" placeholder="姓名" formControlName="name">
+    </label>
+
+<!--    TODO 为什么要加 dirty | touched 判断-->
+    <ng-container *ngIf="nameControl.dirty || nameControl.touched">
+      <p *ngIf="nameControl.hasError('required')" class="has-error">
+        请输入姓名
+      </p>
+      <p *ngIf="nameControl.hasError('minlength') || nameControl.hasError('maxlength')" class="has-error">
+        请输入姓名长度在 2-10 之间
+      </p>
+      <p *ngIf="nameControl.hasError('pattern')" class="has-error">
+        请输入正确格式
+      </p>
+    </ng-container>
+
+    <label class="form-item">
+      <span>年龄</span>
+      <input type="number" placeholder="年龄" formControlName="age">
+    </label>
+
+    <button type="submit" (click)="onSubmitStudentInfo()">提交</button>
+  </form>
+</div>

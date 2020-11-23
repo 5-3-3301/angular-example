@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResponsiveCreateComponent } from './components/responsive-create/responsive-create.component';
 import { ResponsiveSplitComponent } from './components/responsive-split/responsive-split.component';
 import { ResponsiveDynamicCreateComponent } from './components/responsive-dynamic-create/responsive-dynamic-create.component';
+import { ResponsiveValidateComponent } from './components/responsive-validate/responsive-validate.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ResponsiveDynamicCreateComponent } from './components/responsive-dynami
     BasicComponent,
     ResponsiveCreateComponent,
     ResponsiveSplitComponent,
-    ResponsiveDynamicCreateComponent
+    ResponsiveDynamicCreateComponent,
+    ResponsiveValidateComponent
   ],
   imports: [CommonModule, FormRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [FormComponent]
