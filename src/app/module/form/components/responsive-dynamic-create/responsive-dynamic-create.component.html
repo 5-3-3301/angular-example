@@ -1,1 +1,25 @@
-<p>responsive-dynamic-create works!</p>
+<div class="form-basic">
+  <h2>响应式表单组值的更新</h2>
+
+  <h3>添加多个学生信息 <button (click)="addStudent()">添加</button></h3>
+  <form [formGroup]="studentsForm">
+    <ng-container *ngFor="let familyMemberGroup of studentsForm.controls; let i=index; trackBy:track">
+      <h5>
+        学生 {{ i + 1 }}
+        <button *ngIf="i > 0" (click)="removeStudent(i)">删除</button>
+      </h5>
+      <div [formGroupName]="i">
+        <label class="form-item">
+          <span>姓名</span>
+          <input type="text" placeholder="姓名" formControlName="name">
+        </label>
+        <label class="form-item">
+          <span>年龄</span>
+          <input type="number" placeholder="年龄" formControlName="age">
+        </label>
+      </div>
+    </ng-container>
+
+    <button type="submit" (click)="onSubmitStudentInfo()">提交</button>
+  </form>
+</div>

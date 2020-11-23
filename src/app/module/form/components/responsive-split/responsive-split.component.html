@@ -52,7 +52,10 @@
       <h4>家庭成员 <button (click)="addFamilyMember()">添加</button></h4>
       <ng-container *ngFor="let familyMemberGroup of familiesFormArray.controls; let i=index; trackBy:track">
         <div [formGroupName]="i">
-          <h5>成员 {{ i + 1 }}<button (click)="removeFamilyMember(i)">删除</button></h5>
+          <h5>
+            成员 {{ i + 1 }}
+            <button *ngIf="i > 0" (click)="removeFamilyMember(i)">删除</button>
+          </h5>
           <label class="form-item">
             <span>姓名</span>
             <input type="text" placeholder="姓名" formControlName="name">

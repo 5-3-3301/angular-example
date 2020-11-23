@@ -14,11 +14,11 @@ export class ResponsiveCreateComponent implements OnInit {
   ngOnInit(): void {
     this.studentForm = new FormGroup({
       name: new FormControl(''),
-      age: new FormControl()
+      age: new FormControl('')
       // grads: new FormGroup({
-      //   chinese: new FormControl(),
-      //   math: new FormControl(),
-      //   english: new FormControl()
+      //   chinese: new FormControl(''),
+      //   math: new FormControl(''),
+      //   english: new FormControl('')
       // })
     });
   }
