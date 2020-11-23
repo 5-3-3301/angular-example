@@ -8,19 +8,18 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 })
 export class ResponsiveCreateComponent implements OnInit {
   studentForm: FormGroup;
-  studentsForm: FormArray;
 
   constructor() {}
 
   ngOnInit(): void {
     this.studentForm = new FormGroup({
       name: new FormControl(''),
-      age: new FormControl(),
-      grads: new FormGroup({
-        chinese: new FormControl(),
-        math: new FormControl(),
-        english: new FormControl()
-      })
+      age: new FormControl()
+      // grads: new FormGroup({
+      //   chinese: new FormControl(),
+      //   math: new FormControl(),
+      //   english: new FormControl()
+      // })
     });
   }
 

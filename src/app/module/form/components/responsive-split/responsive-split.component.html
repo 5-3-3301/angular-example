@@ -1,0 +1,74 @@
+<div class="form-basic">
+  <h2>响应式表单组值的更新</h2>
+
+  <h3>单个学生信息的添加</h3>
+  <form [formGroup]="studentForm">
+    <label class="form-item">
+      <span>姓名</span>
+      <input type="text" placeholder="姓名" formControlName="name">
+    </label>
+    <label class="form-item">
+      <span>年龄</span>
+      <input type="number" placeholder="年龄" formControlName="age">
+    </label>
+
+    <div formGroupName="grads">
+      <h4>成绩</h4>
+      <label class="form-item">
+        <span>语文</span>
+        <input type="number" placeholder="语文" formControlName="chinese">
+      </label>
+      <label class="form-item">
+        <span>数学</span>
+        <input type="number" placeholder="数学" formControlName="math">
+      </label>
+      <label class="form-item">
+        <span>英语</span>
+        <input type="number" placeholder="英语" formControlName="english">
+      </label>
+    </div>
+
+    <div formGroupName="address">
+      <h4>地址</h4>
+      <label class="form-item">
+        <span>省</span>
+        <input type="text" placeholder="省" formControlName="province">
+      </label>
+      <label class="form-item">
+        <span>市</span>
+        <input type="text" placeholder="市" formControlName="city">
+      </label>
+      <label class="form-item">
+        <span>区</span>
+        <input type="text" placeholder="区" formControlName="district">
+      </label>
+      <label class="form-item">
+        <span>详细地址</span>
+        <input type="text" placeholder="详细地址" formControlName="description">
+      </label>
+    </div>
+
+    <div formGroupName="families">
+      <h4>家庭成员 <button (click)="addFamilyMember()">添加</button></h4>
+      <ng-container *ngFor="let familyMemberGroup of familiesFormArray.controls; let i=index; trackBy:track">
+        <div [formGroupName]="i">
+          <h5>成员 {{ i + 1 }}<button (click)="removeFamilyMember(i)">删除</button></h5>
+          <label class="form-item">
+            <span>姓名</span>
+            <input type="text" placeholder="姓名" formControlName="name">
+          </label>
+          <label class="form-item">
+            <span>电话</span>
+            <input type="number" placeholder="电话" formControlName="phone">
+          </label>
+          <label class="form-item">
+            <span>关系</span>
+            <input type="text" placeholder="关系" formControlName="relation">
+          </label>
+        </div>
+      </ng-container>
+
+    </div>
+    <button type="submit" (click)="onSubmitStudentInfo()">提交</button>
+  </form>
+</div>
