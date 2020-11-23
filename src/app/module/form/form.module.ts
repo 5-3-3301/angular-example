@@ -8,6 +8,7 @@ import { ResponsiveCreateComponent } from './components/responsive-create/respon
 import { ResponsiveSplitComponent } from './components/responsive-split/responsive-split.component';
 import { ResponsiveDynamicCreateComponent } from './components/responsive-dynamic-create/responsive-dynamic-create.component';
 import { ResponsiveValidateComponent } from './components/responsive-validate/responsive-validate.component';
+import { AddressGroupComponent } from './components/address-group/address-group.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ResponsiveValidateComponent } from './components/responsive-validate/re
     ResponsiveCreateComponent,
     ResponsiveSplitComponent,
     ResponsiveDynamicCreateComponent,
-    ResponsiveValidateComponent
+    ResponsiveValidateComponent,
+    AddressGroupComponent
   ],
   imports: [CommonModule, FormRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [FormComponent]
