@@ -9,6 +9,8 @@ import { ResponsiveSplitComponent } from './components/responsive-split/responsi
 import { ResponsiveDynamicCreateComponent } from './components/responsive-dynamic-create/responsive-dynamic-create.component';
 import { ResponsiveValidateComponent } from './components/responsive-validate/responsive-validate.component';
 import { AddressGroupComponent } from './components/address-group/address-group.component';
+import { TemplateValidateComponent } from './components/template-validate/template-validate.component';
+import { ForbiddenNameValidatorDirective } from '../../common/directives/forbidden-name.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AddressGroupComponent } from './components/address-group/address-group.
     ResponsiveSplitComponent,
     ResponsiveDynamicCreateComponent,
     ResponsiveValidateComponent,
-    AddressGroupComponent
+    AddressGroupComponent,
+    TemplateValidateComponent,
+    ForbiddenNameValidatorDirective
   ],
   imports: [CommonModule, FormRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [FormComponent]

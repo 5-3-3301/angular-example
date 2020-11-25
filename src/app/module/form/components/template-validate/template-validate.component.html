@@ -1,0 +1,40 @@
+<div class="form-basic">
+  <h2>模板驱动表单的验证</h2>
+
+  <h3>单个学生信息的添加</h3>
+  <form>
+    <label class="form-item">
+      <span>姓名</span>
+      <input
+        name="name"
+        type="text"
+        placeholder="姓名"
+        required
+        pattern="[\u4E00-\u9FA5]*"
+        minlength="2"
+        maxlength="4"
+        [(ngModel)]="student.name"
+        #name="ngModel"
+      >
+    </label>
+
+    <ng-container *ngIf="name.invalid && (name.dirty || name.touched)">
+      <p *ngIf="name.hasError('required')" class="has-error">
+        请输入姓名
+      </p>
+      <p *ngIf="name.hasError('minlength') || name.hasError('maxlength')" class="has-error">
+        请输入姓名长度在 2-4 之间
+      </p>
+      <p *ngIf="name.hasError('pattern')" class="has-error">
+        请输入正确格式
+      </p>
+    </ng-container>
+
+    <label class="form-item">
+      <span>年龄</span>
+      <input name="age" type="number" placeholder="年龄" [(ngModel)]="student.age">
+    </label>
+
+    <button type="submit" (click)="onSubmitStudentInfo()">提交</button>
+  </form>
+</div>

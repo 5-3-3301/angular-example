@@ -5,6 +5,7 @@ import { ResponsiveCreateComponent } from './components/responsive-create/respon
 import { ResponsiveSplitComponent } from './components/responsive-split/responsive-split.component';
 import { ResponsiveDynamicCreateComponent } from './components/responsive-dynamic-create/responsive-dynamic-create.component';
 import { ResponsiveValidateComponent } from './components/responsive-validate/responsive-validate.component';
+import { TemplateValidateComponent } from './components/template-validate/template-validate.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'responsive-validate',
     component: ResponsiveValidateComponent
+  },
+  {
+    path: 'template-validate',
+    component: TemplateValidateComponent
   },
   {
     path: '',
