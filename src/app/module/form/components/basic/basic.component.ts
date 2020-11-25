@@ -19,11 +19,23 @@ export class BasicComponent implements OnInit {
   }
 
   originValueChange(e: Event): void {
-    // TODO 为什么直接使用 e.target.value 取不到值，类型？
+    // console.log((e.target as HTMLInputElement).value);
     this.originValue = get(e, 'target.value', '');
   }
 
   tempValueChange(value: string): void {
     this.tempValue = value;
+  }
+
+  setOriginValue() {
+    this.originValue = '1111';
+  }
+
+  setRespControlValue() {
+    this.respControl.setValue('2222');
+  }
+
+  setTempValue() {
+    this.tempValue = '3333';
   }
 }

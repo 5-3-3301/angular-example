@@ -1,17 +1,17 @@
 <div class="form-basic">
   <h2>简单示例</h2>
 
-  <h3>原始表单</h3>
+  <h3>原始表单 <button (click)="setOriginValue()">设置原始表单的值</button></h3>
   <input
     type="text"
     placeholder="请输入原始表单内容"
     [value]="originValue"
     (input)="originValueChange($event)"
   />
-<!--  TODO 为什么监听的是 input 事件，原理？ -->
   <p>值：{{ originValue }}</p>
 
-  <h3>响应式表单</h3>
+
+  <h3>响应式表单 <button (click)="setRespControlValue()">设置响应式表单的值</button></h3>
   <input
     type="text"
     placeholder="请输入响应式表单内容"
@@ -19,13 +19,13 @@
   />
   <p>值：{{ respControl.value }}</p>
 
-  <h3>模板驱动表单</h3>
-<!--  TODO [(ngModel)] vs [ngModel]-->
+
+  <h3>模板驱动表单 <button (click)="setTempValue()">设置模板驱动表单的值</button></h3>
   <input
     type="text"
     placeholder="请输入模板驱动表单内容"
-    [ngModel]="tempValue"
-    (ngModelChange)="tempValueChange($event)"
+    [(ngModel)]="tempValue"
   />
+<!--  (ngModelChange)="tempValueChange($event)" -->
   <p>值：{{ tempValue }}</p>
 </div>
