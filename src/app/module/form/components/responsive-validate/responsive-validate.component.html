@@ -8,7 +8,6 @@
       <input type="text" placeholder="姓名" formControlName="name">
     </label>
 
-<!--    TODO 为什么要加 dirty | touched 判断-->
     <ng-container *ngIf="nameControl.dirty || nameControl.touched">
       <p *ngIf="nameControl.hasError('required')" class="has-error">
         请输入姓名
@@ -25,6 +24,17 @@
       <span>年龄</span>
       <input type="number" placeholder="年龄" formControlName="age">
     </label>
+    <ng-container *ngIf="ageControl.dirty || ageControl.touched">
+      <p *ngIf="ageControl.hasError('required')" class="has-error">
+        请输入年龄
+      </p>
+      <p *ngIf="ageControl.hasError('format')" class="has-error">
+        请输入数字格式
+      </p>
+      <p *ngIf="ageControl.hasError('size')" class="has-error">
+        请输入正确的年龄数字
+      </p>
+    </ng-container>
 
     <button type="submit" (click)="onSubmitStudentInfo()">提交</button>
   </form>
