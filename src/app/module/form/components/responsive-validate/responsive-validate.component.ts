@@ -58,8 +58,10 @@ export class ResponsiveValidateComponent implements OnInit {
 
   onSubmitStudentInfo(): void {
     forEach(this.studentForm.controls, control => {
+      console.log(1111, control);
       control.markAsPristine();
       control.updateValueAndValidity();
+      console.log(2222, control);
     });
 
     if (this.studentForm.valid) {
