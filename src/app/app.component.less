@@ -30,5 +30,26 @@
 }
 
 .content {
+  display: flex;
   padding: 60px 10px 10px;
+
+  .slide-bar {
+    width: 200px;
+    padding-top: 16px;
+    overflow: hidden;
+    a {
+      display: inline-block;
+      line-height: 40px;
+      color: #333;
+      font-weight: 500;
+
+      &:hover, &.active {
+        color: dodgerblue;
+      }
+    }
+  }
+
+  .route-content {
+    flex: 1;
+  }
 }

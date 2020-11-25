@@ -16,5 +16,17 @@
 </div>
 
 <div class="content" role="main">
-  <router-outlet></router-outlet>
+  <div class="slide-bar">
+    <ul>
+      <li><a routerLink="/form/basic" routerLinkActive="active">基础创建</a></li>
+      <li><a routerLink="/form/responsive-create" routerLinkActive="active">响应式表单组的创建</a></li>
+      <li><a routerLink="/form/responsive-dynamic-create" routerLinkActive="active">响应式表单数组的创建</a></li>
+      <li><a routerLink="/form/responsive-split" routerLinkActive="active">响应式表单组的拆分</a></li>
+      <li><a routerLink="/form/responsive-validate" routerLinkActive="active">响应式表单验证</a></li>
+      <li><a routerLink="/form/template-validate" routerLinkActive="active">模板驱动表单验证</a></li>
+    </ul>
+  </div>
+  <div class="route-content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
