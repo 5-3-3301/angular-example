@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-responsive-create',
@@ -21,6 +21,8 @@ export class ResponsiveCreateComponent implements OnInit {
       //   english: new FormControl('')
       // })
     });
+
+    console.log('group name control', this.studentForm.get('name'));
   }
 
   onSubmitStudentInfo(): void {

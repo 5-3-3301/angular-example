@@ -16,6 +16,7 @@ export class BasicComponent implements OnInit {
 
   ngOnInit(): void {
     this.respControl = new FormControl('');
+    console.log('basic respControl', this.respControl);
   }
 
   originValueChange(e: Event): void {
