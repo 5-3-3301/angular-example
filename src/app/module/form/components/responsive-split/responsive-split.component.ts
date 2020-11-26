@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-responsive-update',
@@ -9,17 +9,12 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 export class ResponsiveSplitComponent implements OnInit {
   studentForm: FormGroup;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.studentForm = new FormGroup({
       name: new FormControl(''),
       age: new FormControl(''),
-      grads: new FormGroup({
-        chinese: new FormControl(''),
-        math: new FormControl(''),
-        english: new FormControl('')
-      }),
       address: new FormGroup({
         province: new FormControl(''),
         city: new FormControl(''),
@@ -28,6 +23,18 @@ export class ResponsiveSplitComponent implements OnInit {
       }),
       families: new FormArray([])
     });
+
+    // this.studentForm = this.fb.group({
+    //   name: [''],
+    //   age: [''],
+    //   address: this.fb.group({
+    //     province: [''],
+    //     city: [''],
+    //     district: [''],
+    //     description: ['']
+    //   }),
+    //   families: this.fb.array([])
+    // });
   }
 
   get familiesFormArray(): FormArray {
