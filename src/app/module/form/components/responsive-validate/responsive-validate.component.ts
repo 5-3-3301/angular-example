@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import forEach from 'lodash/forEach';
+// import { forbiddenNameValidator } from '../../../../common/utils/forbiddenNameValidator';
 
 @Component({
   selector: 'app-responsive-validate',

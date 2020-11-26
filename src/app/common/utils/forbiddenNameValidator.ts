@@ -1,6 +1,6 @@
 export const forbiddenNameValidator = control => {
   if (!control.value) {
-    return { required: true };
+    return { required: '请输入姓名' };
   }
   if (!/[\u4E00-\u9FA5]/g.test(control.value)) {
     return { pattern: true };
