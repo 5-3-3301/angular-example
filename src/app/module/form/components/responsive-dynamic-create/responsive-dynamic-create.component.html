@@ -3,7 +3,7 @@
 
   <h3>添加多个学生信息 <button (click)="addStudent()">添加</button></h3>
   <form [formGroup]="studentsForm">
-    <ng-container *ngFor="let familyMemberGroup of studentsForm.controls; let i=index; trackBy:track">
+    <ng-container *ngFor="let familyMemberGroup of studentsForm.controls; let i=index;">
       <h5>
         学生 {{ i + 1 }}
         <button *ngIf="i > 0" (click)="removeStudent(i)">删除</button>

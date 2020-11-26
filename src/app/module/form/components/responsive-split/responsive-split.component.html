@@ -32,7 +32,7 @@
 
     <div formGroupName="families">
       <h4>家庭成员 <button (click)="addFamilyMember()">添加</button></h4>
-      <ng-container *ngFor="let familyMemberGroup of familiesFormArray.controls; let i=index; trackBy:track">
+      <ng-container *ngFor="let familyMemberGroup of familiesFormArray.controls; let i=index;">
         <div [formGroupName]="i">
           <h5>
             成员 {{ i + 1 }}

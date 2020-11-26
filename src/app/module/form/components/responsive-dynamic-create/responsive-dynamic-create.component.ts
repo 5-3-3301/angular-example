@@ -22,10 +22,6 @@ export class ResponsiveDynamicCreateComponent implements OnInit {
     });
   }
 
-  track(item: any, index: number) {
-    return index;
-  }
-
   addStudent() {
     this.studentsForm.push(this.studentGroup);
   }

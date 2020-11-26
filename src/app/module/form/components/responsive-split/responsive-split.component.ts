@@ -38,10 +38,6 @@ export class ResponsiveSplitComponent implements OnInit {
     return this.studentForm.get('address') as FormGroup;
   }
 
-  track(item: any, index: number) {
-    return index;
-  }
-
   addFamilyMember() {
     this.familiesFormArray.push(
       new FormGroup({
